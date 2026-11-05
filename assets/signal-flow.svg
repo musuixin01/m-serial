@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 320" width="1240" height="320" role="img" aria-label="M Serial data flow: Qt user interface to Qt SerialPort, OS serial device, and embedded board">
+ <rect width="1240" height="320" rx="22" fill="#f6f9fa"/>
+ <text x="46" y="48" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#1f3242" font-weight="700">A SHORT PATH FROM UI TO BYTES</text>
+ <text x="47" y="78" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#526879">Same serial workflow, different host or target</text>
+ <g font-family="Segoe UI,Arial,sans-serif" text-anchor="middle">
+  <rect x="42" y="113" width="235" height="105" rx="15" fill="#102637"/>
+  <text x="160" y="155" font-size="22" fill="#ffffff" font-weight="650">Qt Widgets</text>
+  <text x="160" y="185" font-size="14" fill="#a8c4d2">Send • Receive • Logs</text>
+  <rect x="350" y="113" width="235" height="105" rx="15" fill="#1d4355"/>
+  <text x="467" y="155" font-size="22" fill="#ffffff" font-weight="650">QSerialPort</text>
+  <text x="467" y="185" font-size="14" fill="#bee2e6">Port &amp; byte streams</text>
+  <rect x="658" y="113" width="235" height="105" rx="15" fill="#e8eef1" stroke="#9db6c2" stroke-width="2"/>
+  <text x="775" y="155" font-size="21" fill="#1f3242" font-weight="650">OS serial device</text>
+  <text x="775" y="185" font-size="14" fill="#587281">COM / ttyUSB / ttyACM</text>
+  <rect x="965" y="113" width="235" height="105" rx="15" fill="#e7f6f3" stroke="#8fcfc6" stroke-width="2"/>
+  <text x="1082" y="155" font-size="21" fill="#174b53" font-weight="650">Target hardware</text>
+  <text x="1082" y="185" font-size="14" fill="#427077">ESP32 • STM32 • etc.</text>
+ </g>
+ <g stroke="#4d8499" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M280 165H342"/><path d="m331 155 11 10-11 10"/>
+  <path d="M588 165H650"/><path d="m639 155 11 10-11 10"/>
+  <path d="M896 165H956"/><path d="m945 155 11 10-11 10"/>
+ </g>
+ <rect x="42" y="247" width="1158" height="44" rx="10" fill="#e2eef0"/>
+ <circle cx="65" cy="269" r="6" fill="#3faeaf"/>
+ <text x="84" y="275" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#365467">Validated: Windows Qt GUI → COM7 → ESP32-S3 native USB Serial/JTAG → exact-byte echo</text>
+</svg>

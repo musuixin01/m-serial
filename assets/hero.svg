@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 440" width="1320" height="440" role="img" aria-label="M Serial, a practical Qt serial workbench, decorated with real serial frame visual language">
+  <defs>
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101d2b"/>
+      <stop offset="1" stop-color="#172839"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5ed6e3"/>
+      <stop offset="1" stop-color="#c1f1eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1320" height="440" rx="24" fill="url(#surface)"/>
+  <g stroke="#244055" stroke-width="1" opacity=".52">
+    <path d="M0 84H1320 M0 176H1320 M0 268H1320 M0 360H1320"/>
+    <path d="M98 0V440 M210 0V440 M322 0V440 M434 0V440 M546 0V440 M658 0V440 M770 0V440 M882 0V440 M994 0V440 M1106 0V440 M1218 0V440"/>
+  </g>
+  <rect x="52" y="47" width="43" height="43" rx="11" fill="#67d7dd"/>
+  <path d="M63 77V59l10 11 10-11v18" fill="none" stroke="#11222e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="111" y="78" font-family="Segoe UI,Arial,sans-serif" fill="#e4f0f5" font-size="18" font-weight="700" letter-spacing="3">EMBEDDED TOOLS</text>
+  <text x="51" y="191" font-family="Segoe UI,Arial,sans-serif" fill="#f0f7fa" font-size="78" font-weight="750" letter-spacing="-2">M<tspan fill="#67d7dd">_</tspan>SERIAL</text>
+  <path d="M52 212H520" stroke="#436275" stroke-width="1"/>
+  <text x="54" y="258" font-family="Segoe UI,Arial,sans-serif" fill="#d2e3ed" font-size="26" font-weight="500">A practical serial workbench.</text>
+  <text x="54" y="294" font-family="Segoe UI,Arial,sans-serif" fill="#96aebc" font-size="17">Qt Widgets  /  C++17  /  Byte-accurate testing</text>
+  <g font-family="Segoe UI,Arial,sans-serif" font-weight="600" font-size="15">
+    <rect x="53" y="344" width="150" height="41" rx="9" fill="#243d4e" stroke="#456a7e"/>
+    <text x="77" y="370" fill="#d7f5f7">QT SERIALPORT</text>
+    <rect x="213" y="344" width="132" height="41" rx="9" fill="#253846" stroke="#48627a"/>
+    <text x="241" y="370" fill="#e6ebf4">WINDOWS</text>
+    <rect x="355" y="344" width="198" height="41" rx="9" fill="#2e3544" stroke="#776953"/>
+    <circle cx="376" cy="365" r="5" fill="#efad74"/>
+    <text x="390" y="370" fill="#f4dfc8">ESP32-S3 TESTED</text>
+  </g>
+  <g transform="translate(745 56)">
+    <rect x="0" y="0" width="516" height="328" rx="20" fill="#0c1723" stroke="#416071" stroke-width="1.5"/>
+    <rect x="1" y="1" width="514" height="46" rx="20" fill="#1e3445"/>
+    <rect x="1" y="29" width="514" height="20" fill="#1e3445"/>
+    <circle cx="24" cy="24" r="5" fill="#5ed6e3"/>
+    <text x="40" y="30" font-family="Consolas,Menlo,monospace" fill="#d9ebf0" font-size="14">COM7 / 115200 / 8N1</text>
+    <text x="410" y="30" font-family="Segoe UI,Arial,sans-serif" fill="#a6bbc8" font-size="13" letter-spacing="1">CONNECTED</text>
+    <path d="M24 70H492 M24 175H492 M24 286H492" stroke="#274152"/>
+    <text x="25" y="99" font-family="Consolas,Menlo,monospace" fill="#9baebd" font-size="14">TX</text>
+    <text x="25" y="215" font-family="Consolas,Menlo,monospace" fill="#9baebd" font-size="14">RX</text>
+    <path d="M64 132H100V94H154V132H187V94H239V132H275V94H327V132H362V94H421V132H472" stroke="#67d7dd" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M64 247H100V209H154V247H187V209H239V247H275V209H327V247H362V209H421V247H472" stroke="#f1b781" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="64" y="159" font-family="Consolas,Menlo,monospace" font-size="14" letter-spacing="3" fill="#b9e9ed">A5  5A  0D  0A</text>
+    <text x="64" y="275" font-family="Consolas,Menlo,monospace" font-size="14" letter-spacing="3" fill="#ffdcbd">A5  5A  0D  0A</text>
+    <rect x="25" y="295" width="465" height="1" fill="#294557"/>
+    <text x="26" y="313" font-family="Consolas,Menlo,monospace" fill="#879ead" font-size="12">TX ↔ RX   •   RAW BYTES   •   ECHO VERIFIED</text>
+  </g>
+</svg>

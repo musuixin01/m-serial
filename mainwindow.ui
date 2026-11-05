@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>串口调试助手</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGroupBox" name="groupBoxPort">
+      <property name="title">
+       <string>串口设置</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayoutPort">
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelPort">
+         <property name="text">
+          <string>串口号：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="comboBoxPortName"/>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="labelBaud">
+         <property name="text">
+          <string>波特率：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QComboBox" name="comboBoxBaudRate"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelDataBits">
+         <property name="text">
+          <string>数据位：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="comboBoxDataBits"/>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="labelParity">
+         <property name="text">
+          <string>校验：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QComboBox" name="comboBoxParity"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="labelStopBits">
+         <property name="text">
+          <string>停止位：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="comboBoxStopBits"/>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLabel" name="labelFlowControl">
+         <property name="text">
+          <string>流控：</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QComboBox" name="comboBoxFlowControl"/>
+       </item>
+       <item row="3" column="0" colspan="4">
+        <layout class="QHBoxLayout" name="horizontalLayoutPortButtons">
+         <item>
+          <widget class="QPushButton" name="pushButtonOpenClose">
+           <property name="text">
+            <string>打开串口</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonRefresh">
+           <property name="text">
+            <string>刷新端口</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer"/>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkBoxShowTimestamp">
+           <property name="text">
+            <string>接收显示时间</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkBoxHexReceive">
+           <property name="text">
+            <string>HEX 接收</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayoutMain">
+      <item>
+       <widget class="QGroupBox" name="groupBoxSend">
+        <property name="title">
+         <string>发送区</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayoutSend">
+         <item>
+          <widget class="QPlainTextEdit" name="plainTextEditSend"/>
+         </item>
+         <item>
+          <layout class="QGridLayout" name="gridLayoutSendOptions">
+           <item row="0" column="0">
+            <widget class="QCheckBox" name="checkBoxHexSend">
+             <property name="text">
+              <string>HEX 发送</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="labelLineEnd">
+             <property name="text">
+              <string>行尾：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QComboBox" name="comboBoxLineEnd"/>
+           </item>
+           <item row="1" column="0" colspan="3">
+            <layout class="QHBoxLayout" name="horizontalLayoutSendButtons">
+             <item>
+              <widget class="QPushButton" name="pushButtonSend">
+               <property name="text">
+                <string>发送</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButtonClearSend">
+               <property name="text">
+                <string>清空发送</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="checkBoxAutoSend">
+               <property name="text">
+                <string>自动发送</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxAutoSendInterval">
+               <property name="minimum">
+                <number>100</number>
+               </property>
+               <property name="maximum">
+                <number>60000</number>
+               </property>
+               <property name="singleStep">
+                <number>100</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBoxReceive">
+        <property name="title">
+         <string>接收区</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayoutReceive">
+         <item>
+          <widget class="QTextEdit" name="textEditReceive"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayoutReceiveButtons">
+           <item>
+            <widget class="QPushButton" name="pushButtonClearReceive">
+             <property name="text">
+              <string>清空接收</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonSaveLog">
+             <property name="text">
+              <string>保存日志</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
