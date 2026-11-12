@@ -16,6 +16,7 @@
     <a href="#-真实运行展示">运行展示</a> ·
     <a href="#-快速开始">构建</a> ·
     <a href="#-硬件验证">硬件验证</a> ·
+    <a href="docs/DEVELOPMENT_ENVIRONMENT.md">开发环境</a> ·
     <a href="docs/ARCHITECTURE.md">架构</a> ·
     <a href="docs/VALIDATION.md">测试记录</a> ·
     <a href="docs/ROADMAP.md">路线图</a>
@@ -77,7 +78,20 @@ mingw32-make -j2
 
 ### 嵌入式 Linux / Linux x64
 
-使用装有 Qt Widgets、Qt SerialPort 及适当交叉工具链的环境打开同一工程。RK3568 ARM64 版本曾成功启动运行；**当前仓库尚未提供 Linux x64 的本轮独立自动化构建证据**。有关平台状态见 [验证记录](docs/VALIDATION.md)。
+使用装有 Qt Widgets、Qt SerialPort 及适当交叉工具链的环境打开同一工程。RK3568 目标平台版本曾成功启动运行；**当前仓库尚未提供 Linux x64 的本轮独立自动化构建证据**。实际 ABI/位数应以板卡 SDK 中工具链 target triple 为准。详见 [验证记录](docs/VALIDATION.md) 和 [开发环境](docs/DEVELOPMENT_ENVIRONMENT.md)。
+
+## ✦ 开发与调试工具链
+
+| 开发环节 | 工具及用途 |
+| :--- | :--- |
+| Qt 桌面程序 | C++17、Qt Creator、Qt 6 Widgets、Qt SerialPort |
+| RK3568 / Linux | Buildroot ARM GCC/G++ 交叉编译；SDK、sysroot 与 ABI 须匹配 |
+| 开发板串口控制台 | MobaXterm Serial：查看启动输出、操作串口控制台 |
+| Linux 远程登录 | MobaXterm SSH：访问远程 Shell、管理目标程序 |
+| 设备管理 | ADB：连接与管理支持的开发板系统 |
+| 底层验证 | ESP32-S3、ESP-IDF、USB Serial/JTAG、GDB、OpenOCD |
+
+> MobaXterm、ADB 属于外部开发调试工具，不是 M_SERIAL 的运行时依赖；串口控制台和 SSH 登录也不等同于应用串口功能验收。详细配置见 [开发环境](docs/DEVELOPMENT_ENVIRONMENT.md)。
 
 ### 使用
 
@@ -116,6 +130,7 @@ M_Serial/
 │   └── signal-flow.svg         # 信号路径图
 ├── docs/
 │   ├── ARCHITECTURE.md
+│   ├── DEVELOPMENT_ENVIRONMENT.md
 │   ├── VALIDATION.md
 │   └── ROADMAP.md
 └── examples/esp32s3-usb-echo/
@@ -127,6 +142,6 @@ M_Serial/
 
 ## ✦ 当前状态与下一步
 
-Windows 版与 ESP32-S3 回环测试已经通过。接下来优先处理 **异常拔插恢复、跨块 UTF-8 解码、严格 HEX 校验、接收缓冲上限**，并补齐 Linux x64 与 ARM64 的系统化回归测试。具体范围与验收标准见 [Roadmap](docs/ROADMAP.md)。
+Windows 版与 ESP32-S3 回环测试已经通过。接下来优先处理 **异常拔插恢复、跨块 UTF-8 解码、严格 HEX 校验、接收缓冲上限**，并补齐 Linux x64 与 RK3568 目标平台的系统化回归测试。具体范围与验收标准见 [Roadmap](docs/ROADMAP.md)。
 
 本仓库目前未选择开源许可证；分享源代码不等同于授予第三方复制、修改或商用权限。

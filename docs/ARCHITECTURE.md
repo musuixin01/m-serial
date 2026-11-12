@@ -48,3 +48,21 @@ flowchart LR
 5. 串口连接并不保证目标设备已正确配置固件、电气接口或数据协议。
 
 修改这部分行为前应先加入回归测试，保护当前已验证的收发逻辑。
+
+## 开发设备管理与应用数据通道
+
+M_SERIAL 的应用串口数据收发与外部开发板管理工具是两条不同的通道：
+
+~~~mermaid
+flowchart LR
+    UI["M_SERIAL / Qt Widgets"] --> SERIAL["Qt SerialPort"]
+    SERIAL --> OS["Windows COM / Linux tty"]
+    OS --> MCU["目标串口设备"]
+    MX_S["MobaXterm Serial"] --> RK_CONSOLE["RK3568 串口控制台"]
+    MX_SSH["MobaXterm SSH"] --> RK_SHELL["RK3568 Linux Shell"]
+    ADB["ADB"] --> RK_ADMIN["RK3568 设备管理"]
+    QT["Qt Creator"] --> COMP["Buildroot ARM GCC/G++"]
+    COMP --> RK_APP["RK3568 目标应用"]
+~~~
+
+MobaXterm Serial 用于查看开发板串口控制台输出，MobaXterm SSH 用于远程登录 Linux Shell；ADB 用于设备管理。Qt Creator 和 Buildroot 交叉编译器用于配置与构建应用。以上工具不是 M_SERIAL 的应用内部功能或运行时依赖，也不证明 RK3568 完成了全套串口测试。见 [开发环境](DEVELOPMENT_ENVIRONMENT.md) 和 [验证记录](VALIDATION.md)。
